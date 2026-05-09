@@ -10,7 +10,7 @@ It is designed for developers who want a deployable music backend without rebuil
 
 - **Language/stack:** Python, FastAPI, Uvicorn
 - **Main app entrypoint:** `app.py`
-- **Interactive API docs:** `/docs` (Swagger UI), `/redoc`, `/openapi.json`
+- **Interactive API docs:** `/docs` (Swagger UI), `/redoc`, `/openapi.json` (Basic Auth protected)
 - **Health endpoint:** `/health`
 
 > Important: This API is **public/stateless**. It does **not** implement user authentication or per-user private data management.
@@ -36,6 +36,11 @@ cp .env.example .env
 
 Edit `.env` only if you need optional integrations (proxy, Spotify, docs password, cache location).
 
+Docs auth note:
+- `/docs`, `/redoc`, and `/openapi.json` require HTTP Basic Auth.
+- Use any username and set the password to `DOCS_PASSWORD`.
+- If `DOCS_PASSWORD` is not set, the app default is `prakamya05`.
+
 ### 3) Run the API
 
 ```bash
@@ -45,7 +50,7 @@ uvicorn app:app --host 0.0.0.0 --port 7860 --reload
 Open:
 - API root: `http://localhost:7860/`
 - Health: `http://localhost:7860/health`
-- Swagger: `http://localhost:7860/docs`
+- Swagger: `http://localhost:7860/docs` (you will be prompted for Basic Auth; password = `DOCS_PASSWORD`)
 
 ## Quick Start (Docker)
 

@@ -13,7 +13,7 @@ This document clearly defines what Musiva API provides and what it does **not** 
 | Catalog entities | Artist, album, playlist, podcast endpoints |
 | Discovery | `/home`, `/charts`, `/trending`, `/genres`, `/mood_categories`, `/mood_playlists/{params}`, `/explore` |
 | Extra sources | Apple Music, Deezer, Spotify trending endpoints |
-| API schema/docs | `/docs`, `/redoc`, `/openapi.json` |
+| API schema/docs | `/docs`, `/redoc`, `/openapi.json` (protected by Basic Auth using `DOCS_PASSWORD`) |
 | Runtime ops | `/health`, cache endpoints |
 | Deployment | Local Python run + Docker support |
 
