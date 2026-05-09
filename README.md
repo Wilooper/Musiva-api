@@ -23,7 +23,7 @@ It is designed for developers who want a deployable music backend without rebuil
 git clone https://github.com/Wilooper/Musiva-api.git
 cd Musiva-api
 python -m venv .venv
-source .venv/bin/activate  # Windows: .venv\\Scripts\\activate
+source .venv/bin/activate  # Windows: .venv\Scripts\activate
 pip install --upgrade pip
 pip install -r requirements.txt
 ```
