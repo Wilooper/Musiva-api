@@ -39,7 +39,8 @@ Edit `.env` only if you need optional integrations (proxy, Spotify, docs passwor
 Docs auth note:
 - `/docs`, `/redoc`, and `/openapi.json` require HTTP Basic Auth.
 - Use any username and set the password to `DOCS_PASSWORD`.
-- If `DOCS_PASSWORD` is not set, the app default is `prakamya05`.
+- Set `DOCS_PASSWORD` explicitly before running in any shared/public environment.
+- The app has an internal fallback when `DOCS_PASSWORD` is unset; do not rely on it.
 
 ### 3) Run the API
 
